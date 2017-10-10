@@ -139,13 +139,15 @@ The J-PARC $g-2$/EDM experiment requires a muon beam with small transverse emitt
 The ultra slow muon is produced from ionization of muonium at thermal energy with laser.
 Muonium is produced by stopping surface muon beam in a muonium production target~\cite{muonium}.  
 This muon beam with low transverse momentum will be re-accelerated to \SI{300}{\MeV\per\clight} \cite{IH} while minimizing the increase of the transverse momentum ($\sigma_{pT}/p = 10^{-5}$).
-The accelerated muon beam is injected to the storage area under \SI{3}{\tesla} field without electric focusing~\cite{injection}. The measurements of $g-2$ with a precision of \SI{0.1}{\ppm} and the EDM with a sensitivity to \SI{e-21}{\elementarycharge \cdot \cm}.  A proper beam diagnostics is required for the development of this new technique. \\
+The accelerated muon beam is injected to the storage area under \SI{3}{\tesla} field without electric focusing~\cite{injection}. The measurements of $g-2$ with a precision of \SI{0.1}{\ppm} and the EDM with a sensitivity to \SI{e-21}{\elementarycharge \cdot \cm}.  A proper beam diagnostics is required for the development of this new technique. 
+
 Different from other surface muon monitors~\cite{muon_bpm1}, the BPM is designed to measure a beam profile and relative intensity for each bunch simultaneously from low intensity (a few muons per bunch) to high intensity in the energy range from a few \si{keV} to \SI{4}{\MeV}.
-A BPM based on Micro-Channel Plate (MCP) has been developed to obtain necessary gain and efficiency to measure a low \textcolor{red}{intensity} beam.
+A BPM based on Micro-Channel Plate (MCP) has been developed to obtain necessary gain and efficiency to measure a low intensity beam.
 There have been several experiments that have used detectors based on MCP assembly to work with muons, neutrons, ions, atoms and positronium~\cite{muon_bpm2, neutron, Ps} beam.
 %but no concrete study has been carried out for the muon beam profile.
 Distinct from other beams, muons stopped in the MCP by short penetration depth are decayed to positrons in the MCP and these positrons can give signals in the BPM via penetration of the MCP channels. 
 Understanding and subtracting this positron background from the muon signal are one of challenges to measure precise beam profile. %with negligible fraction of the background.  \\
+
 In this paper, we present the results of tests using the surface muon beam and the UV light source.
 The responses of muon and positron signal response %is studied and 
 , the linearity% for dynamic range from a few to $10^{4}$ muon per bunch is 
@@ -159,6 +161,7 @@ The spatial resolution was measured by a UV light with a half-circle hole collim
 As a beam profile monitor at the first stage of ultra-cold muon re-acceleration, the BPM is designed to diagnose a muon beam with %\SI{\sim 100}{\micro\metre} 
 sub-milimeter resolution for $\sim$\SI{10}{\mm} beam spot size for the energy range from a few to \SI{4}{\MeV} that is the low $\beta$ section of the muon LINAC \cite{IH}.
 The BPM aims to measure a muon intensity from a few muons to \num{e5} muons per bunch at a repetition rate of \SI{25}{\hertz}. % frequency.
+
 As shown in Fig.~\ref{fig:BPM_scheme}, the BPM consists of two stage of MCP, one stage of phosphor screen and a CCD camera.
 % as an widely used detector assembly in the beam diagnosis. %especially electron, atomic and molecule beam experiments.~\cite{}
 High efficiency for \si{\keV} order atomic and ion beams has been observed in several experiments \cite{MCP_efficiency, MCP_efficiency1}. Similar high efficiency for a low energy muon beam is expected. 
@@ -168,10 +171,7 @@ High efficiency for \si{\keV} order atomic and ion beams has been observed in se
 %\begin{minipage}[t]{70mm}
 \includegraphics[width=0.6\textwidth, height=0.6\textwidth]{figure/bpm_v3.pdf}
 \vspace{-3cm}
-\caption{\textcolor{red}{A schematic view of BPM: two stage of chevron type MCP create electron avalanche from muon hitting in MCP channel.
-Photons are emitted in phosphor screen by incoming electron avalanche.
-Photons are collected by lens and transmitted into CCD sensor.
-}  
+\caption{A schematic view of the BPM
 }
 \vspace{-0.5cm}
 %\end{minipage}
@@ -182,20 +182,22 @@ The MCP assembly (HAMAMATSU, F2225-21P) has two stages of chevron type MCP with 
 In order to block the electron background, negative potential (\SI{-1.9}{\kilo\volt}) is applied in the MCP front surface (MCP IN).
 The MCP back surface (MCP OUT) is connected to a ground after an electric circuit to read out the electric signal of the MCP which is required to check the beam arrival time.
 Positive potential (\SI{3.9}{\kilo\volt}) is applied to the phosphor screen (Phosphor IN).
+
 An exposure time of the CCD camera is set to \SI{500}{\nano\s} to reject the positron from the muon decay ($\tau = \SI{2.2}{\micro\s}$).
 The P47 phosphor material with a short decay time ($\tau_{\SI{10}{\percent}} = \SI{0.11}{\micro\s}$) compared to the exposure time has been used for this discrimination method.
-\textcolor{red}{The MCP assembly is installed in the middle of a cylindrical vacuum chamber constructed from stainless steel.
+
+The MCP assembly is installed in the middle of a cylindrical vacuum chamber constructed from stainless steel.
 The MCP assembly and the CCD camera are aligned in the cylindrical axis.
 The vacuum chamber has thin mylar film (\SI{0.1}{mm}) window in a flange in front of the MCP assembly for beam transmission.
 Mylar film window is also in a side port for positron transmission. 
-A viewport is in a flange behind the MCP assembly.}
+A viewport is in a flange behind the MCP assembly.
 
 \section{Experiment with muon beam}
 
 \subsection{Experimental setup} 
 
 The experimental setup for the surface muon beam test is shown in Fig.\ref{fig:simulation} {(top)} and as schematic view in Fig.\ref{fig:simulation} {(bottom)}.
-J-PARC facility sends surface muons ($\mu^{+}$) as pulsed beam to the MLF D2 area with \SI{100}{\nano\s} beam width, kinetic energy with \textcolor{red}{\SI{4}{\MeV}} and \SI{25}{\hertz} repetition rate~\cite{D-line, D-line1}.
+J-PARC facility sends surface muons ($\mu^{+}$) as pulsed beam to the MLF D2 area with \SI{100}{\nano\s} beam width, kinetic energy with \SI{4}{\MeV} and \SI{25}{\hertz} repetition rate~\cite{D-line, D-line1}.
 The beam intensity is adjusted by slits in the beamline.
 The beam size and intensity was adjusted by one of lead collimators with $\varphi=\SI{10}{\mm}$, $\SI{20}{\mm}$ and $\SI{40}{\mm}$ hole installed between the exit window of the beam line and the BPM vacuum chamber.
 The MCP assembly has been installed inside of the BPM vacuum chamber which is separated from the beam line as an independent vacuum system.
@@ -203,9 +205,9 @@ The MCP assembly has been installed inside of the BPM vacuum chamber which is se
 Number of muon on the BPM was measured from decay positrons.
 Some fraction of the decay positrons from muons stopped in the MCP volume go through the mylar film in the left window of the BPM chamber and give signals to the positron counter. 
 The positron counter consists of two plastic scintillators with corresponding light guides and PMTs. %($ch1, ch2, ch3$).
-The positron counter is shielded by lead blocks from the muon beam line and the BPM vacuum chamber. This will block the decay positron from other materials and a $\varphi = \SI{30}{\mm}$ hole opened in the collimator allows positrons only coming from the MCP.
-The signal above threshold with width narrower than \SI{30}{\ns} is selected from positron counter to reject electric noise. 
-The coincidence condition between two positron counters within \SI{30}{\ns} time range is selected for decay positron from MCP region only without other background.
+The positron counter is shielded by lead blocks from the muon beam line and the BPM vacuum chamber. This will block the decay positron from other materials and a \SI{30}{\mm} diameter hole opened in the collimator allows positrons only coming from the MCP.
+%The signal above threshold with width narrower than \SI{30}{\ns} is selected from positron counter to reject electric noise. 
+%The coincidence condition between two positron counters within \SI{30}{\ns} time range is selected for decay positron from MCP region only without other background.
 %A muon beam size can be larger than the effective area of the MCP by beam emittance and scattering in for large collimator hole setup.
 %So some of the muon are stopped not at the MCP but at other obstacles and positrons from these muons can give signal to the positron counter. 
 %Because this effect can give a bias to estimate a muon number in BPM by the positron counter, 
@@ -221,22 +223,25 @@ The coincidence condition between two positron counters within \SI{30}{\ns} time
 \end{minipage}
 }
 %\vspace{-0.7cm}
-\caption{{(Top)} BPM setup picture at muon beam test setup at the J-PARC MLF D-2 line: muon beam is came from beam line in the front wall which is blocked by white cover. Red circle in middle shows collimator with hole in muon beam line, red rectangular at the left side shows the scintillator and red rectangular at the right side shows CCD camera after BPM chamber; {(Bottom)} muon beam test setup schematic view: Data from BPM by muon beam and data from positron counter by decay positron is collected by DAQ system.}
+\caption{Setup for the test with muon beam at the J-PARC MLF D-2 line}
 \vspace{-0.4cm}
 \label{fig:simulation}
 \end{figure}
-\subsection{Data taking} 
-Data from the BPM have been taken as 2-D pictures by the CCD camera with \SI{500}{\nano\s} exposure time.
-The arrival time of the muon beam has been checked by an electric signal from the MCP for proper exposure timing. At the same time, the data from the positron counter has been digitized with $\SI{10}{\micro\s}$ time window in coincidence with the muon beam pulse.
 
-To obtain beam profile and intensity from a few muons per beam bunch, MCP signal from a single muon should have an enough gain and a sharp signal shape to overcome the CCD camera noise.
-To understand the property of single muon signal, data with a few muons per pulse have been taken. Then, data with several different intensities have been taken by changing the size of the slit in the beam line and collimator. To understand positron signals in the BPM, data were taken with different trigger timing for CCD camera as well. These pictures, especially with a few to several \si{\micro\s} delayed trigger timing from muon beam arrival, are taken with low intensity to high intensity.
-The typical CCD image taken at different intensities are displayed in Fig.3. The high intensity muon beam image as a raw picture (top right) and accumulation of 1000 pictures in colored histogram (top left). Low intensity muon beam raw picture is shown in (bottom left) and low intensity positron data with $\SI{2}{\micro\s}$ delayed trigger timing is shown in (bottom right).
+\subsection{Data taking} 
+Two dimensional pictures were taken by the CCD camera with \SI{500}{\nano\s} exposure time.
+The arrival time of the muon beam has measured by the MCPOUT signal. This timing information was used 
+to set the proper timing for triggering the CCD exposure. The waveform data for the positron counter has been taken for the $\SI{10}{\micro\s}$ period in coincidence with the muon beam pulse.
+
+Data with a few muons per pulse have been taken to understand the property of single muon signal.
+Then, data with higher intensities have been taken by changing the size of the slit in the beam line and collimator. 
+An another set of data were taken with different trigger timing for CCD camera to understand positron signals in the BPM. %These pictures, especially with a few to several \si{\micro\s} delayed trigger timing from muon beam arrival, are taken with low intensity to high intensity.
+The typical CCD image taken at different intensities are displayed in Fig.~\ref{fig:single_cluster}. The high intensity muon beam image as a raw picture (top right) and accumulation of 1000 pictures in colored histogram (top left). Low intensity muon beam raw picture is shown in (bottom left) and low intensity positron data with $\SI{2}{\micro\s}$ delayed trigger timing is shown in (bottom right).
 \begin{figure}[tbp]
 %	\begin{center}
 	\centering
 	\includegraphics[width=\columnwidth]{figure/fig3_v2.pdf}
-	\caption{Typical CCD images taken with muon beam: High intensity muon beam image (Top right), accumulation of 1000 pictures with high intensity muon beam (Top left), low intensity muon beam image (Bottom left) and an image of $\SI{2}{\micro\s}$ delayed trigger timing with low intensity muon beam (Bottom right)
+	\caption{Typical CCD images taken with muon beam. (Top left) accumulation of 1,000 pictures and (Top right) single picture at high intensity.  (Bottom left) an image taken at the muon beam timing and (Bottom right) an image of $\SI{2}{\micro\s}$ delayed trigger timing at low intensity.
 	}
 %	\end{center}
 	\vspace{-0.4cm}
@@ -248,14 +253,14 @@ The typical CCD image taken at different intensities are displayed in Fig.3. The
 
 As shown in Fig.~\ref{fig:single_cluster} (bottom left), the muon signals are distinguishable from the CCD noise by a high gain and the signal shape is a two dimensional sharp Gaussian distribution with additional broad tail distribution. 
 To analyze the signals from CCD noise, a cluster is defined for single signal selection. A single cluster region for each signal is defined as $9 \times 9$ pixels from the pixel with maximum ADC count in each signal. This region is about 5 times of root mean square (RMS) width (1.6 pixel) of a single muon signal. The scale of a pixel in the picture is calculated considering the MCP active area size (\SI{0.08}{\mm \per \pixel}).
+
 Each cluster is identified by detecting $3 \times 3$ pixels with ADC counts above some thresholds considering the standard deviation of the CCD noise fluctuation (\SI{8.7}{ADC}). The properties of single clusters are studied with this selection criteria.
 %The cluster is selected from the highest ADC count while the ADC count of a pixel is above $3~\times~\sigma_{ccd}$.
 %If at least 1 pixel, among 8 pixels around the maximum height pixel of a signal, has ADC count less than $1\times\sigma_{ccd}$, this signal is regarded as a CCD noise. 
 %A standard deviation $\sigma_{ccd}$ of the CCD noise for each pixel are measured without beam and the value \num{8.7 \pm 0.4} ADC count is much less than the muon signal height. The properties of single clusters are studied with this selection criteria.
 
 The distribution of the cluster ADC sum is displayed in Fig.~\ref{fig:BPM_int}.
-The ADC sum distribution shows an isolated peak for exposure on muon pulse and a peakless decrease for delayed exposure
-($t_{delay} = \SIlist[list-pair-separator = {, }, list-units = single]{2; 3}{\micro\s}$).
+The ADC sum distribution shows an isolated peak for exposure on muon pulse and a peakless decrease for delayed exposure ($t_{delay} = \SIlist[list-pair-separator = {, }, list-units = single]{2; 3}{\micro\s}$).
 
 \begin{figure}[tbp]
 %	\begin{minipage}[t]{60mm}
@@ -269,7 +274,8 @@ The ADC sum distribution shows an isolated peak for exposure on muon pulse and a
 	\label{fig:BPM_int}
 \end{figure}
 
-A positron signal can have an elliptic shape or even several bumps over the signal region by penetrating the MCP. That is because the decay positrons are generated inside the MCP and they have momentum with arbitrary directions. To parametrize the signal width, the minimum RMS width and the maximum RMS width of the clusters are calculated along the axes of each ellipse. The maximum width distribution is shown in Fig.~\ref{fig:positron_width}.
+A positron signal can have an elliptic shape or even several bumps over the signal region by penetrating the MCP. That is because the decay positrons are generated inside the MCP and they have momentum with various directions. 
+To parametrize the signal width, the minimum RMS width and the maximum RMS width of the clusters are calculated along the axes of each ellipse. The maximum width distribution is shown in Fig.~\ref{fig:positron_width}.
 
 For the muon beam coincided data, the maximum width distribution is almost the same with the minimum width distribution except a small tale in maximum width distribution. This is because the incident muon has mainly longitudinal momentum and makes symmetric signal.
 For the delayed exposure data
@@ -335,7 +341,8 @@ positron background fitting (\SI{\sim 5.6}{\percent}) and inside light reflectio
 The statistical uncertainty is ten times smaller than systematic uncertainties except for the small positron counts in low intensity beam where the statistical error is about \SI{10}{\percent} for $N_\mu$ ($e^+$ counter).
 The total error is calculated as a square root of the square sum for all contributions and it ranges from \SI{9.6}{\percent} to \SI{11.2}{\percent} for $N_\mu$ (BPM) and \SI{1.7}{\percent} to \SI{11.7}{\percent} for $N_\mu$ ($e^+$ counter) in Fig.7.
 
-A first order polynomial function is fitted for the whole dataset and the slope is \num{1.01 \pm 0.03} with $\chi^{2}/ndf$ value of 0.87. No clear evidence of the saturation is detected and almost all measurements agreed well with fitting function within 2$\sigma$.  
+A first order polynomial function is fitted for the whole dataset and the slope is \num{1.01 \pm 0.03}. No clear evidence of the saturation is detected and almost all measurements agreed well with fitting function within 2$\sigma$.  
+% with $\chi^{2}/ndf$ value of 0.87.
 
 \section{Spatial resolution}
  
@@ -364,7 +371,9 @@ More detailed information on the UV light resolution study can be found in \cite
 $\nu_{\SI{10}{\percent}}$ corresponds to $\Delta_\gamma = \SI{294}{\um}$,
 which should be considered as an upper limit,
 because of light reflection from the edge's surface induced by collimator and UV fiber misalignment.
+
 \begin{figure}[tbp]
+
     \centering
 	\includegraphics[width=\columnwidth]{figure/edge_image_w_uv_4_BH_axis.pdf}
 	\caption{Projected ADC count distribution to Y-axis after proper rotation (UV light data with half circle collimator)}
@@ -378,10 +387,15 @@ Such a resolution satisfies the accelerator requirements.
 
 \section{Conclusion}
 
-A BPM has been developed to diagnose the ultra-cold muon beam line at the J-PARC muon $g-2$/EDM experiment. The BPM has been tested and evaluated by a surface muon beam and a UV light source.
-It has been possible to observe spatial distribution of beam particles with this BPM.
-A high signal to noise ratio between muon signals and positron background is achieved and the positron background rate has been reduced to a negligible level with the adequate selection criteria and short exposure window for CCD camera.
-The BPM shows a good linearity without noticeable saturation for the full capacity from a few muons to \num{e4} muons. The spatial resolution less than \SI{294}{\micro\metre} has been deduced from the UV light data.
+A BPM has been developed measure the profile of  the ultra-cold muon beam 
+for the J-PARC muon $g-2$/EDM experiment. 
+The BPM has been tested and evaluated by a surface muon beam and a UV light source.
+A spatial distribution of muon beam with this BPM was measured with
+a high signal to background ratio between muon signals and positron.
+The positron background rate has been reduced to a negligible level with 
+a short exposure window for CCD camera and the additional selection on the CCD image.
+A good linearity was confirmed without noticeable saturation from a few muons to \num{e4} muons.
+The spatial resolution was estimated as less than \SI{300}{\um} from the UV light data.
 %All test is well agreed with designed BPM requirements.
 
 %This study can be a good reference for a low energy and low intensity beam diagnostics like anti-proton or positron beam which is well developed recently.
@@ -390,11 +404,12 @@ The BPM shows a good linearity without noticeable saturation for the full capaci
 \section*{Acknowledgmens}
 
 We are grateful to the J-PARC personal for the excellent machine operation.
-This work was supported by 
+We thank Dr. T.U~Ito for his advice on the technical design. This work was supported by 
 the JSPS KAKENHI Grant Numbers JP26287053, JP15H03666, JP16J07784,
 the Korean National Research Foundation grants NRF-2015K2A2A4000092, NRF-2015H1A2A1030275, NRF-2017R1A2B3007018,
 the Russian Foundation for Basic Research grant RFBR 17-52-50064 and
-the Russian Science Foundation grant RNF-17-12-01036. 
+the Russian Science Foundation grant RNF-17-12-01036,
+Japan-Russia Research Cooperative Program.
 
 \section*{References}
 
