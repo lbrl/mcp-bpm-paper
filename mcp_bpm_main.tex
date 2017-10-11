@@ -319,7 +319,7 @@ C_{\mu} = C_{total} - C_{e}= A/a - A\varepsilon/a_e
 \end{equation}
 \end{linenomath}
 
-It is safely assumed that one muon generates only one cluster since the transverse momentum of the muon is sufficiently limited by the upstream collimator. Therefore, the calculated number of muon clusters is taken as the number of detected muons by the BPM, $N_{\mu}\ $(BPM) in the $y$-axis of Fig.~\ref{fig:muvsmu}.
+It is safely assumed that one muon generates only one cluster since the transverse momentum of the muon is sufficiently limited by the upstream collimator. Therefore, the calculated number of muon clusters is taken as the number of detected muons by the BPM, $N_{\mu}$(BPM) in the $y$-axis of Fig.~\ref{fig:muvsmu}.
 
 An another independent estimation of the number of muons is made from the number of positrons detected by the scintillators located next to the BPM chamber. The proportionality constant has been obtained from the simulation based on the actual experimental setup which is implemented in GEANT4 library \cite{geant4}. 
 The simulation estimates the number of muons on the MCP from the number of positrons detected by the positron counter in coincidence with muons. 
@@ -339,44 +339,43 @@ The comparison of the number of muons obtained by these two independent methods 
 The statistical and systematic uncertainties are considered in the errors. The major systematic uncertainties are from spatial gain difference (\SI{\sim 4.4}{\percent}), trigger timing uncertainty (\SI{\sim 3.8}{\percent}),
 positron background fitting (\SI{\sim 5.6}{\percent}) and inside light reflection (\SI{\sim 2.4}{\percent}).
 The statistical uncertainty is ten times smaller than systematic uncertainties except for the small positron counts in low intensity beam where the statistical error is about \SI{10}{\percent} for $N_\mu$ ($e^+$ counter).
-The total error is calculated as a square root of the square sum for all contributions and it ranges from \SI{9.6}{\percent} to \SI{11.2}{\percent} for $N_\mu$ (BPM) and \SI{1.7}{\percent} to \SI{11.7}{\percent} for $N_\mu$ ($e^+$ counter) in Fig.7.
+The total error is calculated as a square root of the square sum for all contributions and it ranges from \SI{9.6}{\percent} to \SI{11.2}{\percent} for $N_\mu$ (BPM) and \SI{1.7}{\percent} to \SI{11.7}{\percent} for $N_\mu$ ($e^+$ counter) in Fig.~7.
 
-A first order polynomial function is fitted for the whole dataset and the slope is \num{1.01 \pm 0.03}. No clear evidence of the saturation is detected and almost all measurements agreed well with fitting function within 2$\sigma$.  
+A first order polynomial function is fitted for the whole dataset and the slope is \num{1.01 \pm 0.03}. No clear evidence of the saturation is detected and almost all measurements agreed well with fitting function within $2\sigma$.  
 %with $\chi^{2}/ndf$ value of 0.87. 
 
 \section{Spatial resolution}
  
 The expected muon beam spot size at first stages of muon re-acceleration is a few millimeters.
-To check consistency with this requirements, the sharp-edge pictures were taken with a collimator and UV light source to measure the BPM spatial resolution.
-UV light usage allows one to avoid the positron background inevitably related to muons.
+Sharp-edge pictures were taken with a collimator and UV light source to estimate the BPM spatial resolution.
+Usage of the UV light allows one to avoid the positron background inevitably related to muons.
 
-The half-circle open \SI{.5}{\cm} thick stainless collimator was placed in \SI{1}{\cm} from the MCP front surface
-such as the collimator's edge was near the MCP center.
+The half-circle open \SI{.5}{\cm} thick stainless collimator was placed at \SI{1}{\cm} from the MCP front surface
+such that the collimator's edge was near the MCP center.
 %\textcolor{red}{\SI{0}{\nm}} photons provided by
-UV light provided by the Xe-lamp source were guided by a light fibre to the vacuum chamber.
+The UV light provided by the Xe-lamp source were guided by a optical fibre to the vacuum chamber.
 The light guide output is centered with the main MCP and collimator axis
 with distance along this axis about \SI{15}{\cm}.
 Thus the collimator cast a sharp shadow on the MCP,
-the illuminated plate part gave a signal to be analyzed for spatial resolution measurement.
+the illuminated plate part gave a signal to be analyzed for estimation of the spatial resolution.
 
-The set of pictures taken with the same CCD camera and MCP assembly condition as during the test at the D2 beam line was averaged.
 The collimator edge image was aligned to pixel rows by picture rotation and 
 one pixel thick vertical slices were obtained (see Fig.~\ref{fig:half_circle}).
-Discrete differentiation was applied to each slice  and the peak,
-which corresponds to the collimator edge is,
+Discrete differentiation was applied to each slice.
+The peak,
+which corresponded to the location of the collimator edge,
 was emphasized by Hann function multiplication.
-The modulation transfer function was evaluated by the fast Fourier transformation and
-the \SI{10}{\percent} height frequency $\nu_{\SI{10}{\percent}}$ was obtained using polynomial approximation to additionally suppress statistic fluctuations.
-More detailed information on the UV light resolution study can be found in \cite{Gosha}.
-$\nu_{\SI{10}{\percent}}$ corresponds to $\Delta_\gamma = \SI{294}{\um}$,
+The modulation transfer function was evaluated by the fast Fourier transformation.
+The \SI{10}{\percent} height frequency $\nu_{\SI{10}{\percent}}$ was obtained using polynomial approximation to additionally suppress statistic fluctuations.
+More detailed information on the UV light resolution study can be found in Ref.~\cite{Gosha}.
+$\nu_{\SI{10}{\percent}}$ corresponds to $\Delta_\gamma = \SI{0.29}{\mm}$,
 which should be considered as an upper limit,
-because of light reflection from the edge's surface induced by collimator and UV fiber misalignment.
+because light reflection from the edge's surface induced by collimator and UV fiber misalignment.
 
 \begin{figure}[tbp]
-
     \centering
 	\includegraphics[width=\columnwidth]{figure/edge_image_w_uv_4_BH_axis.pdf}
-	\caption{Projected ADC count distribution to Y-axis after proper rotation (UV light data with half circle collimator)}
+	\caption{Projected ADC count distribution to Y-axis after proper rotation for UV light data with half circle collimator.}
 	\label{fig:half_circle}
 \end{figure}
 
@@ -395,7 +394,7 @@ a high signal to background ratio between muon signals and positron.
 The positron background rate has been reduced to a negligible level with 
 a short exposure window for CCD camera and the additional selection on the CCD image.
 A good linearity was confirmed without noticeable saturation from a few muons to \num{e4} muons.
-The spatial resolution was estimated as less than \SI{300}{\um} from the UV light data.
+The spatial resolution was estimated as less than \SI{.30}{\mm} from the UV light data.
 %All test is well agreed with designed BPM requirements.
 
 %This study can be a good reference for a low energy and low intensity beam diagnostics like anti-proton or positron beam which is well developed recently.
