@@ -7,6 +7,11 @@
 \usepackage{grffile}
 \usepackage{color}
 
+\DeclareFontEncoding{LS1}{}{}
+\DeclareFontSubstitution{LS1}{stix}{m}{n}
+\DeclareRobustCommand{\diameter}{%
+  \text{\usefont{LS1}{stixscr}{m}{n}\symbol{"60}}%
+}
 
 \usepackage[separate-uncertainty = true,
     multi-part-units = single,
@@ -178,7 +183,9 @@ High efficiency for \si{\keV} order atomic and ion beams has been observed in se
 \label{fig:BPM_scheme}
 \end{center} \end{figure}
 
-The MCP assembly (HAMAMATSU, F2225-21P) has two stages of chevron type MCP with an effective area of $\phi = \SI{40}{\mm}$ and a gain of $10^{6\sim7}$ and a phosphor screen (P47). The light output from the phosphor screen has been transmitted through a glass viewport (7056 Borosiliate) and then captured by the cooled CCD camera (PCO, PCO1600: $800 \times 600$ pixels for $2 \times 2$ binning mode) with the lens (ZEISS, Distagon 2/28 ZF.2). 
+The MCP assembly (HAMAMATSU, F2225-21P) has two stages of chevron type MCP with an effective area of
+$\diameter = \SI{40}{\mm}$ and a gain of 
+\numrange{e6}{e7} and a phosphor screen (P47). The light output from the phosphor screen has been transmitted through a glass viewport (7056 Borosiliate) and then captured by the cooled CCD camera (PCO, PCO1600: $800 \times 600$ pixels for $2 \times 2$ binning mode) with the lens (ZEISS, Distagon 2/28 ZF.2). 
 In order to block the electron background, negative potential (\SI{-1.9}{\kilo\volt}) is applied in the MCP front surface (MCP IN).
 The MCP back surface (MCP OUT) is connected to a ground after an electric circuit to read out the electric signal of the MCP which is required to check the beam arrival time.
 Positive potential (\SI{3.9}{\kilo\volt}) is applied to the phosphor screen (Phosphor IN).
