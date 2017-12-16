@@ -248,7 +248,7 @@ the exposure time to enable this discrimination method.
 The MCP assembly is installed in the middle of a cylindrical
 vacuum chamber constructed from stainless steel.  The MCP
 assembly and the CCD camera are aligned in the cylindrical axis.
-The vacuum chamber has a thin mylar film (\SI{0.1}{mm}) window in
+The vacuum chamber has a thin mylar film (\SI{0.1}{mm}) window with $\diameter=\SI{100}{\mm}$ in
 % GMM add window diameter here?
 a flange in front of the MCP assembly for beam transmission.
 Another mylar film window is installed in a side port for
@@ -281,10 +281,10 @@ vacuum chamber which was separated from the beam line as an
 independent vacuum system.
 
 The number of muons on the BPM was measured from decay positrons.
-A fixed fraction of the decay positrons from muons stopped in the
+Some of the decay positrons from muons stopped in the
 MCP volume go through the mylar film in the side port of the BPM
-chamber and give signals to the positron counter. The fraction is
-determined in the analysis as described below.
+chamber and give signals to the positron counter. The number ratio of such positrons and muons on the BPM is
+determined by the simulation as described in data analysis part.
 % GMM this is my understanding, but please make sure it is correct
 The positron
 counter consists of two plastic scintillators with corresponding
@@ -323,11 +323,11 @@ the beam line and the collimator.  Another set of data was
 taken with different trigger timing for the CCD camera to understand
 positron signals in the BPM.  Typical CCD images taken at
 different intensities are displayed in
-Fig.~\ref{fig:single_cluster}.  A raw picture (top right) and
-the accumulation of 1000 pictures in a two dimensional histogram (top left) were taken
+Fig.~\ref{fig:single_cluster}.  A raw picture (Fig.~\ref{fig:single_cluster}a) and
+the accumulation of 1000 pictures in a two dimensional histogram (Fig.~\ref{fig:single_cluster}b) were taken
 with the high intensity muon beam. Low intensity pictures are
-shown for muon arrival time (bottom left) and delayed trigger
-timing by $\SI{2}{\micro\s}$ (bottom right).
+shown for muon arrival time (Fig.~\ref{fig:single_cluster}c) and delayed trigger
+timing by $\SI{2}{\micro\s}$ (Fig.~\ref{fig:single_cluster}d).
 % GMM It would be better to describe the subfigures in the same
 % order as in the caption, to avoid confusion. Also letters for
 % labels would help. Is it correct to conclude that bottom left
@@ -336,13 +336,13 @@ timing by $\SI{2}{\micro\s}$ (bottom right).
 
 \begin{figure}[tbp]
 	\centering
-	\includegraphics[width=\columnwidth]{figure/fig3_v2.pdf}
-	\caption{Typical CCD images taken with muon beam. Top
-          left: accumulation of 1,000 pictures. Top right:
-          single picture at high intensity. Bottom left: an
-          image taken at the muon beam timing. Bottom right:
-          an image of $\SI{2}{\micro\s}$ delayed trigger timing
-          at low intensity.  }
+	\includegraphics[width=\columnwidth]{figure/fig3_v3_number.pdf}
+	\caption{Typical CCD images taken with muon beam. (a) 
+          single picture at high intensity. (b)
+          accumulation of 1,000 pictures. (c) single picture
+          with low intensity. (d)
+          single picture of $\SI{2}{\micro\s}$ delayed trigger timing.
+          The pixels with higher ADC counts are in white. Dashed lines are artificial drawing of MCP boundary.           }
 	\vspace{-0.4cm}
 	\label{fig:single_cluster}
 \end{figure}
@@ -352,16 +352,19 @@ timing by $\SI{2}{\micro\s}$ (bottom right).
 % red is higher exposure. Is there a color code for the 2-d
 % histogram? Is it a linear or logarithmic display?
 
+% S.Bae: I changed the figure, captions and the text from line 326 in tex. 
 
 \subsection{Data analysis}
 
-As shown in Fig.~\ref{fig:single_cluster} (bottom left), the muon
-signals are distinguishable from the CCD noise by the signal
-shape being a two dimensional sharp Gaussian distribution with
-additional broad tail distribution.
+As shown in Fig.~\ref{fig:single_cluster}, the %muon
+signals are distinguishable from the CCD noise. %by the signal
+%shape being a two dimensional sharp Gaussian distribution with
+%additional broad tail distribution.
 % GMM Fig. 3 does not show a Gaussian distribution or a broad
 % tail. What am I missing? I can't understand what you refer to,
 % so I can't come to the same conclusion.
+%
+% S.Bae: I skipped that part in the text. If we need to mention the shape of signal, we need a discussion.
 To analyze the signals from
 CCD noise, a cluster is defined for single signal selection. A
 single cluster region for each signal is defined as $9 \times 9$
@@ -380,14 +383,14 @@ pixel) of a single muon signal.
 % parameter for a flat background, could be fit to the 9x9 array,
 % also demonstrating consistency with the claimed background and
 % showing what you mean by "broad tail distribution".
-The scale of a pixel in the
-picture is determined as \SI{0.08}{\mm \per \pixel} considering
-the size of the MCP active area.
+%The scale of a pixel in the
+%picture is determined as \SI{0.08}{\mm \per \pixel} considering
+%the size of the MCP active area.
+In the data, the 40 mm MCP diameter corresponds to 500 pixels, resulting in a scale of 0.08 mm/pixel.
 % GMM Do you really mean 0.08 mm/pixel _in the picture_ (i.e., on
 % the paper)? If so, be aware that the display of your paper may
 % not be to the same scale as you assume when you state 0.08
 % mm/pixel, e.g., if someone is reading this online or in a pdf.
-%
 % But maybe you mean the scale of the CCD image itself, in (mm at
 % the MCP)/(pixels in the CCD). It is better to stay with a
 % physical size such as the MCP diameter of 40 mm and the number
@@ -395,11 +398,17 @@ the size of the MCP active area.
 % in the top left diagram. To make it clear, you could say, " The
 % 40 mm MCP diameter corresponds to XXX pixels, resulting in a
 % scale of YYY mm/pixel." where YYY = 40/XXX.
+%
+% S.Bae: I changed it as B.Kim said and put the sentence below.
 
-Each cluster is identified by detecting $3 \times 3$ pixels with
-ADC counts above thresholds determined by the CCD noise
-fluctuation ($\sigma=$\SI{8.7}{ADC}). The properties of single
-clusters are studied with this selection criterion.
+%Each cluster is identified by detecting $3 \times 3$ pixels with
+%ADC counts above thresholds determined by the CCD noise
+%fluctuation ($\sigma=$\SI{8.7}{ADC}). The properties of single
+%clusters are studied with this selection criterion.
+Each cluster is identified by detecting $3 \times 3$ pixels which satisfy that
+ADC value in each pixel is larger than mean CCD noise of corresponding pixel by thresholds determined from the noise fluctuation ($\sigma=$\SI{8.7}{ADC}) which is averaged over all pixels. The properties of single
+clusters are studied with this selection criterion. 
+
 % GMM This is not clear to me. I suggest to add more detail. Does
 % 8.7 ADC mean 8.7 channels of the ADC for each pixel? Is that
 % the rms deviation from the mean, or from zero, of the noise as
@@ -409,7 +418,8 @@ clusters are studied with this selection criterion.
 % confirmed in this paragraph. It is not clear whether the
 % threshold is just 1 sigma above the mean noise level, or
 % several sigma; if it is the latter, how many sigma?
-
+%
+% S.Bae : I modified this part to be more clear.
 The distribution of the cluster ADC sum is displayed in
 Fig.~\ref{fig:BPM_int}.  The ADC sum distribution shows an
 isolated peak for exposure to muons, with no corresponding peak
@@ -427,13 +437,15 @@ single]{2; 3}{\micro\s}$).
 	\caption{Cluster ADC sum in $9\times9$ pixels for the
           exposure on muon pulse (solid) and the delayed exposure
           (dashed).  Normalization is done for positron histogram
-          by matching with muon histogram}
+          by matching the first peak height with muon histogram}
 	\vspace{-0.2cm}
 	\label{fig:BPM_int}
 \end{figure}
 % GMM The normalization procedure is not explained clearly. What
 % is matched? Total exposure time (window times events)? Counts
 % in the earliest channel?
+%
+% S.Bae: More detail is included.
 
 A positron signal pixel distribution can have a non-circular shape or even several
 peaks over the signal region because it can penetrate the MCP in
@@ -717,6 +729,6 @@ Research Cooperative Program.
 
 \section*{References}
 
-\bibliography{mybibfile}
+\bibliography{mcp_bpm_main-20171208bib}
 
 \end{document}
