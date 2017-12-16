@@ -3,3 +3,5 @@
 *.spl
 *.aux
 *.gz
+*.bbl
+*.blg
