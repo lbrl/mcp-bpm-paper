@@ -91,7 +91,7 @@
 \author[seventhaddress]{Yasuhiro~Kondo}
 \author[thirdaddress]{Tsutomu~Mibe}
 \author[thirdaddress]{Masashi~Otani}
-\author[fourthaddress,fourthaddress1]{Georgiy~P.~Razuvaev}
+\author[fourthaddress,fourthaddress1,pulkovo]{Georgiy~P.~Razuvaev}
 \author[sixthaddress]{Eunil~Won}
 %\author[mysecondaryaddress]{Global Customer Service\corref{mycorrespondingauthor}}
 %\cortext[mycorrespondingauthor]{Corresponding author}
@@ -102,6 +102,7 @@
 \address[thirdaddress]{High Energy Accelerator Research Organization (KEK), Tsukuba 305-0801, Japan}
 \address[fourthaddress]{Budker Institute of Nuclear Physics SB RAS, Novosibirsk 630090, Russia}
 \address[fourthaddress1]{Novosibirsk State University, Novosibirsk 630090, Russia}
+\address[pulkovo]{Pulkovo Observatory, St. Petersburg, 196140, Russia}
 \address[fifthaddress]{Muon Sci. Lab., Institute of Materials Structure Science, High Accelerator Research Organization, Tsukuba, 305-0801, Japan}
 \address[fifthaddress1]{Muon Sci. Sec., Materials and Life Science Facility, J-PARC, Tokai, 319-1195, Japan}
 \address[sixthaddress]{Department of Physics, Korea University, Seoul, 02841, Korea}
@@ -656,7 +657,21 @@ vacuum chamber.  The light guide output was centered with the main
 MCP and collimator axis with distance along this axis about
 % GMM Distance along this axis from the collimator? (to the light
 % guide output)
-\SI{15}{\cm}.  Thus the collimator cast a sharp shadow on the
+%
+%
+% B.Kim : 15cm is longer than half of chamber length. I need to 
+%         check but it would be distance from UV light feedthrough
+%         to MCP. Do you have any information Gosha??
+% G.Razuvaev : The full length of the chamber is 185 mm. The MCP is placed
+%              at the centre, 185 mm / 2 = 92.5 mm. Then an 8" CF flange was
+%              used, the flange thickness is 25 mm: 92.5 mm + 25 mm = 117.5 mm.
+%              Then a flange with a UV guid input connected to the 8" CF
+%              flange. I don't remember where was the output of this UF light
+%              fibre. Then we should remember that the thickness of collimator
+%              is 5 mm and it is placed in 10 mm from the MCP surface, that
+%              means 117.5 mm - 5 mm - 10 mm = 102.5 mm. This is the best
+%              estimation which I can do and 15 cm should be replaced by 10 cm.
+\SI{10}{\cm}.  Thus the collimator cast a sharp shadow on the
 MCP, and the image of the illuminated MCP surface produced a
 % GMM I think this is what you mean by "plate".
 signal to be analyzed for estimation of the spatial resolution.
@@ -665,12 +680,43 @@ The collimator edge image was aligned to pixel rows by picture
 % GMM It is not clear what is meant by "picture rotation". Is the
 % CCD that views the screen (and defines the pixel orientation)
 % rotated? 
+%
+%
+% S.Bae : As I understood, the picture rotation means that, not CCD itself, but
+%         the image is rotated using ROOT.  That is because the straight edge of
+%         the half circle collimator is not aligned with the x-axis of pixel but
+%         slightly tilted.  By rotating the image, the axes are aligned and the
+%         sliced histogram along y-axis, as in figure 8,  can be made in order
+%         to check the resolution.
+%
+%
+% G.Razuvaev : Sunghan, you are right.  The idea is to align the collimator
+%              edge with pixels rows to make slicing easier.  This is made
+%              offline when all pictures is taken.  Firstly it was dictaded by
+%              the fact that we first take data and only several weeks/monthes
+%              came to analysis.  The second reason is that it is not trivial to
+%              alight so precisely the camera and collimator,  the scale of
+%              desirable precision would be about the pixel size over the dia-
+%              ter of the plate,  approximately 7.4 um / 40 mm ~= 0.02%.
 rotation and one pixel thick vertical slices were obtained (see
 Fig.~\ref{fig:half_circle}).  Discrete differentiation was
 applied to each slice.  The peak, which corresponded to the
 location of the collimator edge, was emphasized by Hann function
 % GMM This is not a familiar term. Is there  a reference? Maybe
 % use Gosha as below, if than explains it?
+%
+%
+% B.Kim : Although there's no precise explanation about Hann windowing, We can find detail explanation in Gosha's paper.
+%
+%
+% G.Razuvaev : As for me, I also hadn't met this term and function before the
+%              this analysis, but it is one of the first solution to which
+%              one come up when strat searching. The Hann function or hannging
+%              is described in Wikipedia, it is part of the scipy and numpy
+%              modules of python, it is included in R language, in Mathemati-
+%              ca.
+%              Yes, the function represented in the reference.  I think to
+%              leave this as it is, if you don't mind.
 multiplication.  The modulation transfer function was evaluated
 by fast Fourier transformation.  The \SI{10}{\percent} height
 frequency $\nu_{\SI{10}{\percent}}$ was obtained using a polynomial
