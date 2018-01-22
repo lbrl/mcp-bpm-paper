@@ -6,6 +6,8 @@
 \usepackage{epstopdf}
 \usepackage{grffile}
 \usepackage{color}
+\usepackage[version=4]{mhchem}
+
 
 
 \usepackage[separate-uncertainty = true,
@@ -21,6 +23,7 @@
 \DeclareSIUnit\clight{\text{\ensuremath{c}}}
 \DeclareSIUnit\ppm{\text{ppm}}
 \DeclareSIUnit\pixel{\text{pixel}}
+\DeclareSIUnit\muonp{\text{\ensuremath{\mu^+}}}
 
 \DeclareFontEncoding{LS1}{}{}
 \DeclareFontSubstitution{LS1}{stix}{m}{n}
@@ -69,7 +72,7 @@
 
 \begin{frontmatter}
 
-\title{ Development of a Microchannel Plate Based Beam Profile Monitor for Re-accelerated Muon Beam}
+\title{ Development of a Microchannel Plate Based Beam Profile Monitor for a Re-accelerated Muon Beam}
 %\tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
 
 %% Group authors per affiliation:
@@ -120,7 +123,7 @@
   been confirmed that the BPM has a dynamic range from a few to
   $10^4$ muons per bunch without saturation.  The spatial resolution of
   the BPM has been estimated to be less than \SI{0.30}{\mm}.  A
-  partial discrimination of positrons from muons has
+  partial discrimination of positrons from muon decays has
   been achieved under discrete particle conditions.
 
 \end{abstract}
@@ -164,12 +167,15 @@ energy with lasers.  Muonium is produced by stopping a surface muon
 beam in a muonium production target~\cite{muonium}.  This muon
 beam with low transverse momentum will be re-accelerated to the momentum value of
 \SI{300}{\MeV\per\clight} \cite{IH} while minimizing the increase
-of the transverse momentum ($\sigma_{pT}/p = 10^{-5}$).  The
+of the transverse momentum ($\sigma_{p_T}/p = 10^{-5}$).
+The
 accelerated muon beam is injected to the storage area under
 \SI{3}{\tesla} magnetic field without electric
-focusing~\cite{injection}.  The experiment measures $g-2$ with a
+focusing~\cite{injection}.
+The experiment measures $g_\mu-2$ with a
 precision of \SI{0.1}{\ppm} and the EDM with a sensitivity to
-\SI{e-21}{\elementarycharge \cdot \cm}.  Proper beam diagnostics
+\SI{e-21}{\elementarycharge \cdot \cm}.
+Proper beam diagnostics
 are required for the development of this new muon beam.
 
 In contrast to other surface muon monitors~\cite{muon_bpm1,
@@ -227,13 +233,15 @@ beam is expected.
 
 The MCP assembly (Hamamatsu F2225-21P) has two stages of chevron
 type MCPs with an effective area corresponding to a diameter
-of $\diameter = \SI{40}{\mm}$ and
-gain of \numrange{e6}{e7} plus a phosphor screen (P47). The
+of $\diameter \SI{40}{\mm}$ and
+gain of \numrange{e6}{e7} plus a phosphor screen (P47).
+The
 light output from the phosphor screen is transmitted through a
 glass viewport (7056 borosilicate) and then captured by the
-cooled CCD camera (PCO PCO1600: $800 \times 600$ pixels with
+cooled CCD camera (PCO pco.1600: $800 \times 600$ pixels with
 combined $2 \times 2$ binning mode) with lens (Zeiss
-Distagon 2/28 ZF.2).  In order to block the electron background,
+Distagon 2/28 ZF.2).
+In order to block the electron background,
 negative potential (\SI{-1.9}{\kilo\volt}) is applied in the MCP
 front surface.  The MCP back surface is connected to a ground
 after an electric circuit to read out the electric signal of the
@@ -243,14 +251,16 @@ phosphor screen.
 The exposure time of the CCD camera is set to \SI{0.5}{\micro\s} to
 reject positrons from the muon decay
 ($\tau = \SI{2.2}{\micro\s}$ \cite{muon_pdg}).  The P47 phosphor
-material (Y$_2$SiO$_5$:Ce) is chosen to have a short decay time
+material
+\ce{Y2SiO5 $:$ Ce}
+is chosen to have a short decay time
 ($\tau_{\SI{10}{\percent}} = \SI{0.11}{\micro\s}$) compared to
 the exposure time to enable this discrimination method.
 
 The MCP assembly is installed in the middle of a cylindrical
 vacuum chamber constructed from stainless steel.  The MCP
 assembly and the CCD camera are aligned in the cylindrical axis.
-The vacuum chamber has a thin mylar film (\SI{0.1}{mm}) window with $\diameter=\SI{100}{\mm}$ in
+The vacuum chamber has a thin mylar film (\SI{0.1}{mm}) window with $\diameter \SI{100}{\mm}$ in
 % GMM add window diameter here?
 a flange in front of the MCP assembly for beam transmission.
 Another mylar film window is installed in a side port for
@@ -268,17 +278,20 @@ muon facility provides surface muon ($\mu^{+}$) beam in single pulse mode
 to the Material and Life Science Experimental Facility (MLF)
 D-line D2 area with \SI{100}{\nano\s} beam width,
 \SI{4}{\MeV} kinetic energy, \SI{25}{\hertz} repetition
-rate, and the intensity of a few $10^{6~}\mu^{+}$\SI{}{/\s}~\cite{muon_bpm3, D-line1}.  The beam intensity was adjusted by
+rate, and the intensity of a few
+\SI{e6}{\muonp \per \s}~\cite{muon_bpm3, D-line1}.
+The beam intensity was adjusted by
 slits in the beamline.  The beam size and intensity were further
 adjusted by installing one of a set of lead collimators with
-$\diameter=\SI{10}{\mm}$, $\SI{20}{\mm}$ or $\SI{40}{\mm}$ hole
+$\diameter \SI{10}{\mm}$, $\diameter \SI{20}{\mm}$ or $\diameter \SI{40}{\mm}$ hole
 between the exit window of the beam line and the BPM
 % The intensity was adjusted with slits and collimator. What was
 % the range of muon intensity and of beam positron intensity?
 % The specific numbers for the selected experimental
 % arrangement(s) should be specified when displaying the data in
 % the next sections as well.
-vacuum chamber.  The MCP assembly was installed inside the BPM
+vacuum chamber.
+The MCP assembly was installed inside the BPM
 vacuum chamber which was separated from the beam line as an
 independent vacuum system.
 
@@ -293,7 +306,7 @@ counter consists of two plastic scintillators with corresponding
 light guides and PMTs.  The positron counter was shielded by lead
 blocks to suppress decay positrons from directions other than from
 the MCP.  A lead collimator with a
-$\diameter = \SI{30}{\mm}$ hole was used to provide a direct view
+$\diameter \SI{30}{\mm}$ hole was used to provide a direct view
 of the MCP from the positron counter.
 
 \begin{figure}[tb]
@@ -314,7 +327,8 @@ Two dimensional pictures were taken by the CCD camera with
 \SI{500}{\nano\s} exposure time.  The arrival time of the muon
 beam was measured by the electronic signal of the MCP. This timing
 information was used to set the proper timing for triggering the
-CCD exposure. The exposure at the arrival time of the muon beam ($t_{delay} = \SI{0}{\micro\s}$) was set by matching the center of exposure time window with the measured arrival time. The waveform data for the positron counter was
+CCD exposure. The exposure at the arrival time of the muon beam ($t_{\text{delay}} = \SI{0}{\micro\s}$) was set by matching the center of exposure time window with the measured arrival time.
+The waveform data for the positron counter was
 taken for a $\SI{10}{\micro\s}$ period in coincidence with the
 muon beam pulse.
 
@@ -338,7 +352,7 @@ by $\SI{2}{\micro\s}$ (Fig.~\ref{fig:single_cluster}d).
 
 \begin{figure}[tbp]
 	\centering
-	\includegraphics[width=\columnwidth]{figure/fig3_v3_number.pdf}
+	\includegraphics[width=\columnwidth]{figure/fig3_v3_number_enlarged.pdf}
 	\caption{Typical CCD images taken with muon beam. (a) 
 		Single picture at high intensity beam. (b)
 		Accumulation of 1,000 pictures at high intensity beam. (c) Single picture
@@ -429,7 +443,7 @@ The distribution of the cluster ADC sum is displayed in
 Fig.~\ref{fig:BPM_int}.  The ADC sum distribution shows an
 isolated peak for exposure to muons, with no corresponding peak
 for delayed exposure
-($t_{delay} =$ either$~2~$or$~\SI{3}{\micro\s}$).
+($t_{\text{delay}} =$ either$~2~$or$~\SI{3}{\micro\s}$).
 % GMM Does this mean either 2 or 3 mus delay, each with 500 ns
 % width, and that both look the same? Or is it just one delay, a
 % window between 2 and 3? The notation is not clear. This is also
@@ -489,9 +503,10 @@ symmetric signal.
 % time-position correlation bias in event selection.
 For the delayed exposure data
 % GMM Again, the notation is not clear below.
-($t_{delay} =$ either$~2~$or$~\SI{3}{\micro\s}$), the minimum width distribution is
-similar to that of the muon signal, but the maximum width
-distribution shows an excess at large RMS width value as shown in Fig.~\ref{fig:positron_width}. Under the maximum
+($t_{\text{delay}} =$ either$~2~$or$~\SI{3}{\micro\s}$),
+the minimum width distribution is similar to that of the muon signal,
+but the maximum width distribution shows an excess at large RMS width value as shown in Fig.~\ref{fig:positron_width}.
+Under the maximum
 RMS width cut ($\Gamma_{max} < \SI{0.15}{\mm}$),
 \SI{57}{\percent} of the clusters in the delayed exposure
 survived while \SI{94}{\percent} of the clusters in the muon
@@ -520,12 +535,13 @@ muon beam. %The total ADC sum distribution versus the trigger time
 % and the time width of each pulse. That becomes relevant in
 % this analysis and should not be ignored.
 
-For a $\SI{500}{\nano\s}$ exposure with $t_{delay} = \SI{0}{\micro\s}$, $\SI{11}{\percent}$ of the
+For a $\SI{500}{\nano\s}$ exposure with $t_{\text{delay}} = \SI{0}{\micro\s}$, $\SI{11}{\percent}$ of the
 stopped muons are expected to decay to the positrons within the
 % GMM I would expect this number to be 20%. Could you please
 % check? Or maybe I don't understand... shouldn't the fraction be
 % (1. - exp(-(0.5/2.2)))?
-exposure. The contribution of the decay positrons to the BPM
+exposure.
+The contribution of the decay positrons to the BPM
 signal is deduced from the total ADC sum distribution in Fig. \ref{fig:time_distribution}. An exponential function with a constant background term is fitted to the data in the time region
 later than $\SI{2}{\micro\s}$, in order to avoid the
 contributions of incident muons. The measured decay parameter
@@ -581,11 +597,11 @@ positrons. Thus, the number of clusters generated by the
 positrons is also estimated as $\varepsilon A/a_e$. Then, the
 rest of clusters are considered to be generated by muons. The
 number of muon clusters $C_{\mu}$ is calculated with this
-reasoning, {\it i.e}
+reasoning, {\it i.e.}
 
 \begin{linenomath}
 \begin{equation}
-C_{\mu} = C_{total} - C_{e}= A/a - A\varepsilon/a_e.
+C_{\mu} = C_{\text{total}} - C_{e}= A/a - A\varepsilon/a_e.
 \end{equation}
 \end{linenomath}
 
